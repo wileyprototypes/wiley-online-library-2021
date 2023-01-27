@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-pgc-master="basic.html">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <title>Blank Template for Bootstrap</title>
+        <meta name="theme-color" content="#ffffff"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png"/>
+        <link rel="shortcut icon" href="../../assets/favicons/favicon.ico"/>
+        <link rel="manifest" href="../../manifest.webmanifest"/>
+        <!-- Bootstrap core CSS -->
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- Custom styles for this template -->
+        <link href="../../style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic,400italic,700italic,600,600italic&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700,700italic,400italic&display=swap"/>
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="wol-classic" data-pgc-field="wolBody">
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <header data-pgc="wol.header">
+            <nav class="shadow-sm">
+                <div class="container">
+                    <div class="align-items-center d-flex justify-content-between py-4"><a href="/index.html"><img src="../../assets/images/logos/wol-logo-black.svg" width="210px"/></a>
+                        <button type="button" class="btn btn-link btn-sm" data-bs-toggle="modal" data-bs-target="#modal1" data-pgc-field="wol-log-in-register">Log in / Register</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="border-bottom py-4">
+                <div class="container">
+                    <h1 class="h3 mb-0">My account</h1>
+                </div>
+            </section>
+            <section class="py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <aside class="bg-light" data-pgc-define="wolMyAccountNav">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item"><a class="active disabled fw-normal nav-link small" aria-current="page" href="#" data-pgc-edit="wolMyAccountNavPersonalInformation[no_content]" data-pgc-edit-classes="active,disabled">Personal information</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#" data-pgc-edit="wolMyAccountNavAddress[no_content]" data-pgc-edit-classes="active,disabled">Address</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#">Subscriptions & Purchases</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#">Subscription access</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#">Free access code</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#">Manage alerts</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#">Favorites</a>
+                                    </li>
+                                    <li class="nav-item"><a class="fw-normal nav-link small" href="#">Saved searches</a>
+                                    </li>
+                                </ul>
+                            </aside>                             
+                        </div>
+                        <div class="col-md-9">
+                            <div class="border mb-3">
+                                <div class="border-bottom p-3">
+                                    <fieldset>
+                                        <legend class="fw-bold">Personal information</legend>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="inputFirstName" class="form-label">First name*</label>
+                                                    <input type="text" class="form-control" id="inputFirstName" aria-describedby="nameHelp" required="true" value="Stuart"/>
+                                                </div>                                                 
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="inputLastName" class="form-label">Last name*</label>
+                                                    <input type="text" class="form-control" id="inputLastName" aria-describedby="nameHelp" required="true" value="Allen"/>
+                                                </div>                                                 
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="inputEmail" class="form-label">Email or Customer ID*</label>
+                                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required="true" value="sallen@wiley.com"/>
+                                                </div>                                                 
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="inputEmailRepeat" class="form-label">Retype email*</label>
+                                                    <input type="email" class="form-control" id="inputEmailRepeat" aria-describedby="emailHelp" required="true"/>
+                                                    <div id="nameHelp" class="form-text text-end"><a href="#">Change password</a>
+                                                    </div>
+                                                </div>                                                 
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Country/Location*</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Select your country or location</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>                                                 
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword2" class="form-label">Area of interest*</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option>Select your area of interest</option>
+                                                        <option value="1" selected>Physical Chemistry</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>                                                 
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <img src="../../assets/images/reCAPTCHA/newCaptchaAnchor.gif" width="300px" class="d-block img-fluid ms-auto"/>
+                                </div>
+                                <div class="p-3">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="small">* Indicates a required field</p> 
+                                        </div>
+                                        <div class="col-md-6 text-end">
+                                            <div class="btn-group" role="group" aria-label="Basic example"> 
+                                                <button type="button" class="btn btn-link text-uppercase">Discard changes</button>                                                 
+                                                <button type="button" class="btn btn-primary text-uppercase">Update</button>                                                 
+                                            </div>                                             
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <p class="mb-0"><a href="#">Delete Wiley Online Library account</a></p>
+                                </div>
+                            </div>
+                            <div class="border mb-3">
+                                <div class="p-3">
+                                    <fieldset>
+                                        <legend class="fw-bold">Sign up for email lists</legend>
+                                        <p>Sign up for marketing email on Wiley products and services and manage your preferences: <a href="#">www.wiley.com/email</a></p>
+                                    </fieldset>
+                                </div>
+                            </div>                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer data-pgc="wol.footer">
+            <section data-pg-name="wol" class="bg-primary py-4 text-center text-lg-start text-white" data-pgc-field="wol-footer-wol">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <h2 class="fw-light h5">About Wiley Online Library</h2>
+                            <ul class="list-unstyled"> 
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Privacy Policy</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Terms of Use</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Cookies</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Accessibility</a>
+                                </li>                                 
+                            </ul>                             
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h2 class="fw-light h5">Help &amp; Support</h2>
+                            <ul class="list-unstyled"> 
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Contact Us</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Training and Support</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">DMCA &amp; Reporting Piracy</a>
+                                </li>                                 
+                            </ul>                             
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h2 class="fw-light h5">Opportunities</h2>
+                            <ul class="list-unstyled"> 
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Subscription Agents</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Advertisers &amp; Corporate Partners</a>
+                                </li>                                 
+                            </ul>                             
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h2 class="fw-light h5">Connect with Wiley</h2>
+                            <ul class="list-unstyled"> 
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">The Wiley Network</a>
+                                </li>
+                                <li class="mb-1"><a href="" class="text-decoration-none text-reset">Wiley Press Room</a>
+                                </li>                                 
+                            </ul>                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-primary py-4 text-white" data-pg-name="wiley">
+                <div class="container">
+                    <div class="align-items-center row">
+                        <div class="col-md-4 text-center text-md-end"> 
+                            <img src="../../assets/images/logos/wiley-wordmark-white.svg" width="120" class="mb-3 mb-md-0"/>
+                        </div>
+                        <div class="col-md-8 order-md-first"> 
+                            <p class="mb-0 small text-center text-md-start">Copyright &copy; 1999-2021 John Wiley &amp; Sons, Inc. All rights reserved</p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <script src="../../assets/js/popper.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

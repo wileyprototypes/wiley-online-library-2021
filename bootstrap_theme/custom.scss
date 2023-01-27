@@ -1,0 +1,426 @@
+/* Bootstrap theme customized with Pinegrow Web Editor */
+/* Vars go before the @import */
+// colour declarations
+$white: white;
+$gray-100: #F8F9FA;
+$gray-200: #EFEFF0;
+$gray-300: #D8D9DA;
+$gray-400: #C2C3C6;
+$gray-500: #767676;
+$gray-600: #414246;
+$gray-700: #2F3032;
+$gray-800: #1C1D1E;
+$gray-900: #141414;
+$black: #000;
+$blue: #005274;
+$purple: #6f42c1;
+$red: #A41022;
+$orange: #CC4E00;
+$yellow: #ffc107;
+$green: #068853;
+$cyan: #006D76;
+
+// wiley brand pre 2021
+$old-teal: #00a185;
+
+// wiley brand 2021
+$dark-green: #115c36;
+$medium-green: #198c53;
+$bright-green: #18c76f;
+$dark-berry: #941e66;
+$medium-berry: #b92d80;
+$bright-berry: #ff91aa;
+$dark-blue: #123d80;
+$medium-blue: #1b5ba0;
+$bright-blue: #18b7fb;
+$dark-orange: #d66310;
+$medium-orange: #EB850D;
+$bright-yellow: #ffc805;
+$w-dark-gray-text: #383838;
+$w-dark-gray-1: #505050;
+$w-dark-gray-2: #828282;
+$w-light-gray-1: #d8d9da;
+$w-light-gray-2: #efeff0;
+
+// bss overrides
+// color theme
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $orange;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+$open-access: $dark-berry;
+$getFTR: #096A73;
+$white: #fff;
+$theme-colors: ("primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark, "open-access": $open-access, "getFTR": $getFTR, "dark-berry": $dark-berry, "medium-berry": $medium-berry, "bright-berry": $bright-berry, "dark-green": $dark-green, "medium-green": $medium-green, "bright-green": $bright-green, "dark-blue": $dark-blue, "medium-blue": $medium-blue, "bright-blue": $bright-blue, "w-light-gray-2": $w-light-gray-2);
+
+// other variables
+$min-contrast-ratio: 3;
+$color-contrast-dark: $dark;
+$enable-rounded: false;
+$enable-rfs: false;
+$enable-negative-margins: true;
+$body-color: $gray-800;
+$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$headings-font-weight: $font-weight-bold;
+$btn-font-weight: $font-weight-bold;
+$grid-gutter-width: 1.5rem;
+$border-color: $gray-300;
+$headings-margin-bottom: 0.5em;
+$text-muted: $gray-500;
+$carousel-control-width: 64px;
+$box-shadow: 0 10px 20px rgba($black,0.19), 0 3px 12px rgba($black,0.23);
+$box-shadow-sm: 0 1px 3px rgba($black,0.12), 0 1px 4px rgba($black,0.24);
+$box-shadow-lg: 0 19px 38px rgba($black,0.30), 0 6px 24px rgba($black,0.22);
+
+@import "bootstrap/bootstrap-utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "wiley-brand-background": (
+      property: background-color,
+      class: wol--bg,
+      values: (
+        dark-green: $dark-green,
+		medium-green: $medium-green,
+		bright-green: $bright-green,
+      ),
+    ),
+	"wiley-brand-text": (
+      property: color,
+      class: wol--text,
+      values: (
+        dark-green: $dark-green,
+		medium-green: $medium-green,
+		bright-green: $bright-green,
+      ),
+    ),
+	"opacity": (
+      property: opacity,
+      class: opacity,
+      values: (
+        0: 0%,
+        20: 20%,
+        40: 40%,
+        60: 60%,
+        80: 80%,
+        100: 100%,
+      ),
+	),
+	"css-columns": (
+      property: columns,
+      class: css-columns,
+	  responsive: true,
+      values: 2 3 4 6,
+    ),
+    "border": (
+      property: border,
+	  responsive: true,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-top": (
+      property: border-top,
+	  responsive: true,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-end": (
+      property: border-right,
+	  responsive: true,
+      class: border-end,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-bottom": (
+      property: border-bottom,
+	  responsive: true,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-start": (
+      property: border-left,
+	  responsive: true,
+      class: border-start,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+  )
+);
+
+@import "bootstrap/bootstrap";
+
+/* Generic rules */
+.serif {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: normal;
+}
+
+a,
+.btn-link {
+    font-weight: $font-weight-bold;
+}
+
+.text-decoration-hover {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+.mdi {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: inherit;
+    line-height: 1;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+
+    &.mdi-18px {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+    }
+
+    &.mdi-36px {
+        font-size: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    &.mdi-48px {
+        font-size: 48px;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.img-contain {
+    object-fit: contain;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.css-columns {
+    column-gap: $grid-gutter-width;
+    column-rule: solid 1px $border-color;
+    columns: 1;
+}
+
+// animations
+@keyframes bounce {
+    0% {
+        transform: translateY(0%);
+    }
+
+    33% {
+        transform: translateY(8%);
+    }
+
+    66% {
+        transform: translateY(-6%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-animation-bounce {
+    &:hover,
+    &:focus {
+        animation: bounce 0.15s;
+    }
+}
+
+.icon-animation-bounce {
+    &:hover,
+    &:focus {
+        .mdi {
+            animation: bounce 0.25s;
+        }
+    }
+}
+
+.animation-rotate-icon {
+    animation-duration: 3s;
+    animation-name: rotate360;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+// // WOL specific rules
+// gradients
+.wol--bg-gradient--blue-green {
+    background-image: linear-gradient(135deg, $green,$blue 100%);
+}
+
+.wol--bg-gradient--gray {
+    background-image: linear-gradient(135deg,$gray-100 0,$gray-400 100%);
+}
+
+// author lists
+.wol--author-list button {
+    display: inline-flex;
+
+    &::after {
+        content: ",";
+    }
+
+    &:last-of-type::after {
+        content: "";
+    }
+}
+
+// getFTR
+.getFTR-icon {
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+}
+
+// article header related article linking
+.versionLinking-button[aria-expanded=true] {
+    border-bottom: 2px solid;
+    border-bottom-color: inherit
+}
+
+// animated chevron
+a[aria-expanded],
+button[aria-expanded] {
+    .collapse-chevron {
+        transition-duration: .25s;
+        transition-property: transform;
+    }
+}
+
+a[aria-expanded=false],
+button[aria-expanded=false] {
+    .collapse-chevron {
+        transform: rotate(180deg);
+    }
+}
+
+// // WOL classic rules
+// WOL container max width
+body.wol-classic {
+    @media (min-width: 1200px) {
+        .container,
+        .container-sm,
+        .container-md,
+        .container-lg,
+        .container-xl {
+            max-width: 1080px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .container,
+        .container-sm,
+        .container-md,
+        .container-lg,
+        .container-xl,
+        .container-xxl {
+            max-width: 1080px;
+        }
+    }
+}
+
+// WOL article tabs
+.wol--article-tabs {
+    span:not(.mdi) {
+        font-size: 12px;
+    }
+
+    .nav-link {
+        border-bottom-width: 3px;
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+        color: $primary;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: $primary;
+        border-left-color: transparent;
+
+        span:not(.mdi) {
+            color: $primary !important;
+        }
+    }
+}
+
+// new WOL branding links
+.all-links-medium-blue a {
+    color: $medium-blue;
+}
+
+.all-links-dark-blue a {
+    color: $dark-blue;
+}
+
+// loading placeholder (skeleton)
+.loading-placeholder {
+    visibility: hidden;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+        background: linear-gradient(-45deg, rgba(255,255,255,.1), rgba(0,0,0,.1), rgba(255,255,255,.1), rgba(0,0,0,.1));
+        animation: gradient 5s linear infinite;
+        background-size: 400% 400%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
